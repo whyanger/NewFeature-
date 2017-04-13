@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  NewFeature
+//
+//  Created by why on 2017/1/4.
+//  Copyright © 2017年 moreShare. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define BWScreenWidth        [[UIScreen mainScreen] bounds].size.width
+#define BWScreenHeight       [[UIScreen mainScreen] bounds].size.height
+
+#define COLOR_HEX(_hex)         [UIColor colorWithRed:((float)((_hex & 0xFF0000) >> 16)) / 255.0 \
+green:((float)((_hex & 0xFF00)>> 8)) / 255.0 \
+blue:((float) (_hex & 0xFF)) / 255.0 alpha:1.0f]
+
+
+
+
+
+#define COLOR_Theme             COLOR_HEX(0x38b3c0)
+
+/*! 警告框-一个按钮【View】 <确定按钮蓝色样式>*/
+#define BA_AlertAtView(title,msg) [[[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+
+#endif /* PrefixHeader_pch */
